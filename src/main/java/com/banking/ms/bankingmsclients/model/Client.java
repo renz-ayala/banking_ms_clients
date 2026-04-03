@@ -13,7 +13,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @AllArgsConstructor
 @Builder
 @Table(name = "clients", schema = "public")
-public class Clients {
+public class Client {
     @Id
     @Column("client_id")
     private Long id;

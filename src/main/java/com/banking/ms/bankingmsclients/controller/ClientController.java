@@ -1,6 +1,6 @@
 package com.banking.ms.bankingmsclients.controller;
 
-import com.banking.ms.bankingmsclients.model.Clients;
+import com.banking.ms.bankingmsclients.model.Client;
 import com.banking.ms.bankingmsclients.service.ClientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +15,7 @@ public class ClientController {
     private final ClientService clientService;
 
     @GetMapping("/get-client/{uniqueId}")
-    public Mono<ResponseEntity<Clients>> getClient(@PathVariable String uniqueId) {
+    public Mono<ResponseEntity<Client>> getClient(@PathVariable String uniqueId) {
         return clientService.getClientByUniqueId(uniqueId)
                 .map(ResponseEntity::ok)
                 .defaultIfEmpty(ResponseEntity.notFound().build());
