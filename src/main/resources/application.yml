@@ -2,9 +2,9 @@ spring:
   application:
     name: bankingMsClients
   r2dbc:
-    url: r2dbc:postgresql://db.fmwxlqxvcevbsssayttv.supabase.co:5432/postgres
-    username: postgres
-    password: Acm1ptwtf123
+    url: r2dbc:postgresql://${DB_HOST}:${DB_PORT}/${DB}
+    username: ${DB_USER}
+    password: ${DB_PASSWORD}
 
 server:
   port: 11101
