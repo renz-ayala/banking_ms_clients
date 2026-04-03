@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: bankingMsClients
+  r2dbc:
+    url: r2dbc:postgresql://db.fmwxlqxvcevbsssayttv.supabase.co:5432/postgres
+    username: postgres
+    password: Acm1ptwtf123
+
+server:
+  port: 11101
+
+
