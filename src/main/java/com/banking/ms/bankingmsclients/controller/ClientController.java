@@ -17,7 +17,7 @@ public class ClientController {
     @GetMapping("/get-client/{uniqueId}")
     public Mono<ResponseEntity<Client>> getClient(@PathVariable String uniqueId) {
         return clientService.getClientByUniqueId(uniqueId)
-                .map(ResponseEntity::ok)
+                .map(c -> ResponseEntity.ok().body(c))
                 .defaultIfEmpty(ResponseEntity.notFound().build());
     }
 }
