@@ -1,4 +1,4 @@
-package com.banking.ms.bankingmsclients.model;
+package com.banking.ms.bankingmsclients.repository.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

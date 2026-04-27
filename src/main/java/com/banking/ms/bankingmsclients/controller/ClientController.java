@@ -1,6 +1,6 @@
 package com.banking.ms.bankingmsclients.controller;
 
-import com.banking.ms.bankingmsclients.model.Client;
+import com.banking.ms.bankingmsclients.repository.entity.Client;
 import com.banking.ms.bankingmsclients.service.ClientService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

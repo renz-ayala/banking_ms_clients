@@ -1,6 +1,6 @@
 package com.banking.ms.bankingmsclients.service;
 
-import com.banking.ms.bankingmsclients.model.Client;
+import com.banking.ms.bankingmsclients.repository.entity.Client;
 import reactor.core.publisher.Mono;
 
 public interface ClientService {
