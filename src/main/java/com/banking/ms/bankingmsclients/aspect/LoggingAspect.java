@@ -20,8 +20,9 @@ public class LoggingAspect {
 
         return ((Mono<?>) joinPoint.proceed())
                 .contextWrite(ctx -> {
+                    String id = ctx.getOrDefault(TrackingIdFilter.TRACK_ID, "No-ID");
                     MdcUtil.map(ctx);
-                    log.info("AOP Log - starting method : {}()", methodName);
+                    log.info("AOP Log [ID:{}] - starting method : {}()",id,  methodName);
                     return ctx;
                 })
                 .flatMap(response -> Mono.deferContextual(ctx -> {
