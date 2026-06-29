@@ -1,5 +1,6 @@
 package com.banking.ms.bankingmsclients.controller;
 
+import com.banking.ms.bankingmsclients.controller.response.ClientResponse;
 import com.banking.ms.bankingmsclients.repository.entity.Client;
 import com.banking.ms.bankingmsclients.service.ClientService;
 import lombok.RequiredArgsConstructor;
@@ -15,7 +16,7 @@ public class ClientController {
     private final ClientService clientService;
 
     @GetMapping("/get-client/{uniqueId}")
-    public Mono<ResponseEntity<Client>> getClient(@PathVariable String uniqueId) {
+    public Mono<ResponseEntity<ClientResponse>> getClient(@PathVariable String uniqueId) {
         return clientService.getClientByUniqueId(uniqueId)
                 .map(c -> ResponseEntity.ok().body(c))
                 .defaultIfEmpty(ResponseEntity.notFound().build());

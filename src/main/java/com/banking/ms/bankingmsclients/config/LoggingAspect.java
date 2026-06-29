@@ -1,7 +1,6 @@
-package com.banking.ms.bankingmsclients.aspect;
+package com.banking.ms.bankingmsclients.config;
 
 import com.banking.ms.bankingmsclients.util.MdcUtil;
-import com.banking.ms.bankingmsclients.config.TrackingIdFilter;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
